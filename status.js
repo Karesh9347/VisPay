@@ -3,7 +3,7 @@ const saltKey = "099eb0cd-02cf-4e2a-8aca-3e6c6aff0399";
 const saltIndex = '1';
 const crypto = require('crypto');
 const axios=require("axios")
-
+const BASE_URL="vis-pay-front.vercel.app"
 
 const checkStatus = async (req, res) => {
     try {
