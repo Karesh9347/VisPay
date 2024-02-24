@@ -8,6 +8,7 @@ const saltKey = '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
 const saltIndex = '1';
 dotenv.config()
 const BASE_URL="vis-pay-front.vercel.app";
+const BASE_URI="https://vispay.onrender.com";
 const initiatePayment = async (req, res) => {
   try {
     const transactionId = 'VIT' + req.body.rollNumber + uuidv4().slice(0, 4).toUpperCase();
@@ -16,9 +17,9 @@ const initiatePayment = async (req, res) => {
       merchantTransactionId: transactionId,
       merchantUserId: req.body.name + '-' + req.body.rollNumber,
       amount: req.body.amount * 100,
-      redirectUrl: `${BASE_URL}/api/status/${transactionId}`,
+      redirectUrl: `${BASE_URI}/api/status/${transactionId}`,
       redirectMode: 'POST',
-      callbackUrl: `${BASE_URL}/api/status/${transactionId}`,
+      callbackUrl: `${BASE_URI}/api/status/${transactionId}`,
       mobileNumber: req.body.mobile,
       paymentInstrument: {
         type: 'PAY_PAGE',
