@@ -7,7 +7,7 @@ const merchantId = 'PGTESTPAYUAT';
 const saltKey = '099eb0cd-02cf-4e2a-8aca-3e6c6aff0399';
 const saltIndex = '1';
 dotenv.config()
-const BASE_URL="https://vis-pay-front-heczlbx0d-nareshs-projects-a4b7f1c1.vercel.app";
+const BASE_URL="vis-pay-front.vercel.app";
 const initiatePayment = async (req, res) => {
   try {
     const transactionId = 'VIT' + req.body.rollNumber + uuidv4().slice(0, 4).toUpperCase();
