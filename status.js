@@ -32,9 +32,9 @@ const checkStatus = async (req, res) => {
   if (response.data.success === true) {
     
   
-    return res.redirect(`http://localhost:3000/success?userId=${merchantTransactionId}`);
+    return res.redirect(`https://vis-pay-front-heczlbx0d-nareshs-projects-a4b7f1c1.vercel.app/success?userId=${merchantTransactionId}`);
   } else {
-    return res.redirect(`http://localhost:300/failure`);
+    return res.redirect(https://vis-pay-front-heczlbx0d-nareshs-projects-a4b7f1c1.vercel.app/failure`);
   }
   }catch (error) {
       console.error('Error checking payment status:', error);
