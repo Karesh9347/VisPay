@@ -54,6 +54,6 @@ router.get('/user', verifyToken, async (req, res) => {
 });
 app.use('/', router);
 
-app.listen(BASE_URI, () => {
+app.listen(port, () => {
   console.log(`Server is running on :${BASE_URI}`);
 });
