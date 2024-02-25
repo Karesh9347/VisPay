@@ -18,7 +18,7 @@ const router = express.Router();
 dotenv.config();
 app.use(cors());
 app.use(express.json());
-const BASE_URL=process.env.BASE_URI
+BASE_URI="vis-pay.vercel.app"
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -54,6 +54,6 @@ router.get('/user', verifyToken, async (req, res) => {
 });
 app.use('/', router);
 
-app.listen(port, () => {
+app.listen(BASE_URI, () => {
   console.log(`Server is running on :${BASE_URI}`);
 });
