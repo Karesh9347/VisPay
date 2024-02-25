@@ -4,6 +4,7 @@ const saltIndex = '1';
 const crypto = require('crypto');
 const axios=require("axios")
 
+BACK_URL="vis-pay-front.vercel.app"
 
 const checkStatus = async (req, res) => {
     try {
