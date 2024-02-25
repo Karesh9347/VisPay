@@ -4,7 +4,7 @@ const saltIndex = '1';
 const crypto = require('crypto');
 const axios=require("axios")
 
-BACK_URL="vis-pay-front.vercel.app"
+
 
 const checkStatus = async (req, res) => {
     try {
@@ -33,9 +33,9 @@ const checkStatus = async (req, res) => {
   if (response.data.success === true) {
     
   
-    return res.redirect(`${BACK_URL}/success?userId=${merchantTransactionId}`);
+    return res.redirect(`https://vis-pay-front.vercel.app/success?userId=${merchantTransactionId}`);
   } else {
-    return res.redirect(`${BACK_URL}/failure`);
+    return res.redirect(`https://vis-pay-front.vercel.app/failure`);
   }
   }catch (error) {
       console.error('Error checking payment status:', error);
