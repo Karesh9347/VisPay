@@ -18,7 +18,7 @@ const router = express.Router();
 dotenv.config();
 app.use(cors());
 app.use(express.json());
-BASE_URI="vis-pay.vercel.app"
+BASE_URI="https://vispay.onrender.com"
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
