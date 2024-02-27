@@ -15,12 +15,12 @@ const initiatePayment = async (req, res) => {
     const payload = {
       merchantId: merchantId,
       merchantTransactionId: transactionId,
-      merchantUserId: req.body.name + '-' + req.body.rollNumber,
+      merchantUserId:  'VIT-' + req.body.rollNumber,
       amount: req.body.amount * 100,
       redirectUrl: `${BASE_URI}/api/status/${transactionId}`,
       redirectMode: 'POST',
       callbackUrl: `${BASE_URI}/api/status/${transactionId}`,
-      mobileNumber: req.body.mobile,
+      
       paymentInstrument: {
         type: 'PAY_PAGE',
       },
