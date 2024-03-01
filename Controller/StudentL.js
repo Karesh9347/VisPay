@@ -17,7 +17,7 @@ const StudentL = async (req, res) => {
         }
       }
       const token = jwt.sign(payload,"na", {
-        expiresIn: '1h'}); 
+        expiresIn: '10h'}); 
         console.log(token)
       return res.status(201).json({ message: "Logged in successfully" ,token});
     } else {
