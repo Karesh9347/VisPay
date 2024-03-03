@@ -18,7 +18,11 @@ const app = express();
 const port = process.env.PORT || 3001;
 const router = express.Router();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://vis-pay-front.vercel.app', // or '*' for any origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Enable credentials (if needed)
+}));
 app.use(express.json());
 
 const BASE_URL = process.env.BASE_URL;
